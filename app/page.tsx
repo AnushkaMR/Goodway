@@ -572,7 +572,8 @@ export default function Home() {
             height={10}
             alt="Logo"
             className="relative md:left-20 top-5 md:block"
-          ></MotionImage>
+
+></MotionImage>
         </div>
       </section>
     </div>
