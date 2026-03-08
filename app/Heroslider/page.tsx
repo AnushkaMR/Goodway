@@ -10,7 +10,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 export default function Heroslider() {
   return (
-    <div className="w-full h-[40vh] sm:h-[70vh] lg:h-[95vh]">
+    <div id="#home" className="w-full h-[40vh] sm:h-[70vh] lg:h-[95vh]">
       <Swiper
         pagination={{ clickable: true }}
         

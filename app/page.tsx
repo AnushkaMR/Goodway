@@ -25,10 +25,10 @@ export default function Home() {
             />
           </div>
           <div className="hidden md:flex items-center gap-4 font-medium text-lg px-5 mx-10 text-[#3C467B]">
-            <Link href="/Home">HOME</Link>
+            <Link href="#home">HOME</Link>
             <Link href="#about">ABOUT</Link>
-            <Link href="/Our business">OUR BUSINESS</Link>
-            <Link href="/Contact">CONTACT</Link>
+            <Link href="#business">OUR BUSINESS</Link>
+            <Link href="#contact">CONTACT</Link>
           </div>
 
           <button className="md:hidden " onClick={() => setOpen(!open)}>
@@ -43,23 +43,26 @@ export default function Home() {
                   : "opacity-0 -translate-y-3 max-h-0"
               }`}
             >
-              <Link href="/Home">HOME</Link>
+              <Link href="#home">HOME</Link>
               <Link href="#about">ABOUT</Link>
-              <Link href="/Our business">OUR BUSINESS</Link>
-              <Link href="/Contact">CONTACT</Link>
+              <Link href="#business">OUR BUSINESS</Link>
+              <Link href="#contact">CONTACT</Link>
             </div>
           )}
         </div>
       </nav>
       <Heroslider />
-      <section  id="about" className="w-full h-[50vh] md:h-[100vh] flex items-center justify-center bg-amber-50">
+      <section
+        id="about"
+        className="w-full h-[50vh] md:h-[100vh] flex items-center justify-center bg-amber-50"
+      >
         <div className="flex flex-row items-center justify-center gap-10 h">
           <div>
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-[#3C467B]"
               >
@@ -69,14 +72,14 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut",delay:0.2 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-[#3C467B] w-20 mb-4 md:mb-6 rounded-2xl relative left-35 md:left-50 h-1 "
             ></motion.div>
             <motion.p
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut",delay:0.3 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px] text-center text-[#3C467B]"
             >
@@ -93,7 +96,7 @@ export default function Home() {
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut", delay: 0.4 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a4.png"
             width={500}
@@ -108,18 +111,18 @@ export default function Home() {
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2.0, ease: "easeOut" }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/E1.png"
             width={450}
             height={450}
             alt="E1"
-            className="absolute left-70 opacity-20 hidden md:block"
+            className="absolute left-130 opacity-20 hidden md:block"
           ></MotionImage>
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" , delay: 0.2 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a3.png"
             width={500}
@@ -133,7 +136,7 @@ export default function Home() {
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut", delay: 0.3 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-white"
               >
@@ -143,14 +146,14 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 0.4 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-white w-20 mb-4 md:mb-6 rounded-2xl relative left-35 md:left-50 h-1 "
             ></motion.div>
             <motion.p
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2}}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px] text-center text-white"
             >
@@ -162,14 +165,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[50vh] md:h-[80vh] flex items-center justify-center bg-amber-50">
+      <section  className="w-full h-[50vh] md:h-[80vh] flex items-center justify-center bg-amber-50">
         <div className="flex flex-row items-center justify-center gap-10 h">
           <div>
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-[#3C467B]"
               >
@@ -179,14 +182,14 @@ export default function Home() {
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" , delay: 0.2 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-[#3C467B] w-20 mb-4 md:mb-6 rounded-2xl relative left-35 md:left-50 h-1 "
             ></motion.div>
             <motion.p
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut", delay: 0.3 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px] text-center text-[#3C467B]"
             >
@@ -206,7 +209,7 @@ export default function Home() {
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut", delay: 0.4 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a4.png"
             width={500}
@@ -216,23 +219,23 @@ export default function Home() {
           ></MotionImage>
         </div>
       </section>
-      <section className="w-full h-[50vh] md:h-[80vh] flex items-center justify-center bg-[#3C467B]">
+      <section id="#business" className="w-full h-[50vh] md:h-[80vh] flex items-center justify-center bg-[#3C467B]">
         <div className="flex flex-row items-center justify-center gap-10 h">
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/E2.png"
             width={450}
             height={450}
             alt="E2"
-            className="absolute left-50 opacity-20 hidden md:block"
+            className="absolute left-120 opacity-20 hidden md:block"
           ></MotionImage>
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a5.png"
             width={500}
@@ -245,8 +248,8 @@ export default function Home() {
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-white"
               >
@@ -255,15 +258,15 @@ export default function Home() {
             </div>
             <motion.div
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-white w-20 mb-4 md:mb-6 rounded-2xl relative left-5 md:left-5 h-1 "
             ></motion.div>
             <motion.p
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px]  text-center text-white"
             >
@@ -282,8 +285,8 @@ export default function Home() {
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-[#3C467B]"
               >
@@ -292,15 +295,15 @@ export default function Home() {
             </div>
             <motion.div
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-[#3C467B] w-20 mb-4 md:mb-6 rounded-2xl relative left-35 md:left-50 h-1 "
             ></motion.div>
             <motion.p
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px] text-center text-[#3C467B]"
             >
@@ -313,8 +316,8 @@ export default function Home() {
 
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a7.png"
             width={500}
@@ -329,19 +332,19 @@ export default function Home() {
         <div className="flex flex-row items-center justify-center gap-10 h">
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/E2.png"
             width={450}
             height={450}
             alt="E2"
-            className="absolute left-70 opacity-20 hidden md:block"
+            className="absolute left-130 opacity-20 hidden md:block"
           ></MotionImage>
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a6.png"
             width={500}
@@ -354,8 +357,8 @@ export default function Home() {
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-white"
               >
@@ -364,15 +367,15 @@ export default function Home() {
             </div>
             <motion.div
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-white w-20 mb-4 md:mb-6 rounded-2xl relative left-5 md:left-5 h-1 "
             ></motion.div>
             <motion.p
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px]  text-center text-white"
             >
@@ -392,8 +395,8 @@ export default function Home() {
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.0, ease: "easeOut" }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true, amount: 0.5 }}
                 className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-[#3C467B]"
               >
@@ -402,15 +405,15 @@ export default function Home() {
             </div>
             <motion.div
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="bg-[#3C467B] w-20 mb-4 md:mb-6 rounded-2xl relative left-35 md:left-50 h-1 "
             ></motion.div>
             <motion.ul
               initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
               viewport={{ once: true, amount: 0.5 }}
               className="w-[350px] md:w-[500px] 
              space-y-5 text-center list-disc text-[#3C467B]"
@@ -428,8 +431,8 @@ export default function Home() {
 
           <MotionImage
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             src="/a8.png"
             width={400}
@@ -440,12 +443,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-[50vh] md:h-[80vh] flex items-center justify-center bg-[#3C467B]">
+      <section id="contact" className="w-full h-full   pt-10 pb-10 text-center md:h-[80vh] flex items-center justify-center bg-[#3C467B]">
         <div className="flex justify-center items-center flex-col">
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className=" mb-4 md:mb-6 text-5xl md:text-6xl text-center font-bold text-white"
           >
@@ -453,8 +456,8 @@ export default function Home() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, ease: "easeOut" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className="w-[350px] md:w-[500px]  text-center text-white"
           >
@@ -463,70 +466,114 @@ export default function Home() {
             dual operations ensure agility, customer proximity, and continuous
             support.
           </motion.p>
-          <div className="flex flex-row gap-20 mt-10">
-            <div><motion.ul
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.5 }}
-              className="list-disc pl-6 space-y-4 text-white"
-            >
-              {/* Main point 1 */}
-              <li>
-                <span className="font-semibold">Goodway Indian</span>
-                <ul className="list pl-6 mt-2 space-y-1 text-white">
-                  <li>Goodway Group</li>
-                  <li>NO,1-B,Kurinji Nagar Extn,Sheriff</li>
-                  <li>Colony,Tiruppur - 641604</li>
-                </ul>
-              </li>
+          <div className="flex flex-col  md:flex-row gap-20 mt-10">
+            <div>
+              <motion.ul
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="list-disc pl-6 space-y-4 text-white"
+              >
+                {/* Main point 1 */}
+                <li>
+                  <span className="font-semibold">Goodway Indian</span>
+                  <ul className="list pl-6 mt-2 space-y-1 text-white">
+                    <li>Goodway Group</li>
+                    <li>NO,1-B,Kurinji Nagar Extn,Sheriff</li>
+                    <li>Colony,Tiruppur - 641604</li>
+                  </ul>
+                </li>
 
-              {/* Main point 2 */}
-              <li>
-                <span className="font-semibold">Contact Cards:</span>
-                <ul className="list pl-6 mt-2 space-y-1 text-white">
-                  <li>+91 9842221335</li>
-                  <li>Suresh@goodway.international</li>
-                </ul>
-              </li>
-            </motion.ul></div>
-            <div><motion.ul
-              initial={{ opacity: 0, y: 60 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.5 }}
-              className="list-disc pl-6 space-y-4 text-white"
-            >
-              {/* Main point 1 */}
-              <li>
-                <span className="font-semibold">Goodway International</span>
-                <ul className="list pl-6 mt-2 space-y-1 text-white">
-                  <li>Office :-</li>
-                  <li>Level 1, Suite 2 / 192-196 Belmore Rd.</li>
-                  <li>River-wood, NSW 2210 Australia Postal</li>
-                </ul>
-              </li>
+                {/* Main point 2 */}
+                <li>
+                  <span className="font-semibold">Contact Cards:</span>
+                  <ul className="list pl-6 mt-2 space-y-1 text-white">
+                    <li>+91 9842221335</li>
+                    <li>Suresh@goodway.international</li>
+                  </ul>
+                </li>
+              </motion.ul>
+            </div>
+            <div>
+              <motion.ul
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="list-disc pl-6 space-y-4 text-white"
+              >
+                {/* Main point 1 */}
+                <li>
+                  <span className="font-semibold">Goodway International</span>
+                  <ul className="list pl-6 mt-2 space-y-1 text-white">
+                    <li>Office :-</li>
+                    <li>Level 1, Suite 2 / 192-196 Belmore Rd.</li>
+                    <li>River-wood, NSW 2210 Australia Postal</li>
+                  </ul>
+                </li>
 
-              {/* Main point 2 */}
-              <li>
-                <span className="font-semibold">Contact Cards:</span>
-                <ul className="list pl-6 mt-2 space-y-1 text-white">
-                  <li>+61 434 606 329</li>
-                  <li>Suresh@goodway.international</li>
-                </ul>
-              </li>
-            </motion.ul></div>
+                {/* Main point 2 */}
+                <li>
+                  <span className="font-semibold">Contact Cards:</span>
+                  <ul className="list pl-6 mt-2 space-y-1 text-white">
+                    <li>+61 434 606 329</li>
+                    <li>Suresh@goodway.international</li>
+                  </ul>
+                </li>
+              </motion.ul>
+            </div>
           </div>
         </div>
       </section>
       <section className="w-full h-[50vh] md:h-[18vh] flex items-center justify-center bg-white">
-        <div className="flex flex-row gap-8">
-          <Image src="/f1.png" width={200} height={100} alt="Logo"></Image>
-          <Image src="/f2.png" width={200} height={100} alt="Logo"></Image>
-          <Image src="/f3.png" width={200} height={100} alt="Logo"></Image>
-          <Image src="/f4.png" width={200} height={10} alt="Logo"></Image>
-        </div>
+        <div className="md:flex  grid grid-cols-2 md:flex-row gap-8">
+          <MotionImage
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            src="/f1.png"
+            width={200}
+            height={100}
+            alt="Logo"
+            className="relative md:left-20   md:block"
+          ></MotionImage>
 
+          <MotionImage
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            src="/f2.png"
+            width={200}
+            height={100}
+            alt="Logo"
+            className="relative md:left-20  md:block"
+          ></MotionImage>
+          <MotionImage
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            src="/f3.png"
+            width={200}
+            height={100}
+            alt="Logo"
+            className="relative md:left-20  md:block"
+          ></MotionImage>
+          <MotionImage
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            src="/f4.png"
+            width={200}
+            height={10}
+            alt="Logo"
+            className="relative md:left-20 top-5 md:block"
+          ></MotionImage>
+        </div>
       </section>
     </div>
   );
